@@ -1,9 +1,9 @@
-function toBase(bin, base) {
+function toBase (bin, base) {
   const binary = bin.reverse()
   let result = []
   let data = 0
   let convert = 0
-  for(let i = 0; i < binary.length; i++) {
+  for (let i = 0; i < binary.length; i++) {
     convert = binary[i] * Math.pow(base, i)
     result.push(convert)
   }
@@ -11,9 +11,8 @@ function toBase(bin, base) {
   return data
 }
 
-function trialDivisionTest(n) {
-  const sqrt = Math.sqrt(n)
-  for(var i = 2; i <= 10; ++i) {
+function trialDivisionTest (n) {
+  for (var i = 2; i <= 10; ++i) {
     if (n % i === 0) {
       return false
     }
