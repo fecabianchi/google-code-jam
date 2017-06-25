@@ -3,8 +3,8 @@ const itertools = require('aureooms-js-itertools')
 const helpers = require('./helpers')
 
 function jam_coin() {
-  const gen = itertools.product( [ "01"] ,  30);
-  let coins = 0;
+  const gen = itertools.product([ "01"], 30)
+  let coins = 0
 
   while (true) {
     let bin = gen.next().value
@@ -16,8 +16,8 @@ function jam_coin() {
     for(let i = 2; i < 11; i++) {
       let converted = helpers.toBase(bin, i)
       if(helpers.trialDivisionTest(converted)) {
-        stop = true;
-        break;
+        stop = true
+        break
       }
     }
 
